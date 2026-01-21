@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Rahma Dina Ariyanti</title>
+
+  <style>
+    :root {
+      --bg-dark: #0b1f33;
+      --bg-dark-2: #102a43;
+      --primary: #38bdf8; /* biru muda neon */
+      --accent: #22c55e;  /* hijau */
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+
+    /* ===== HERO ===== */
+    header {
+      background: radial-gradient(circle at top right, #123a63, var(--bg-dark));
+      padding: 90px 20px 80px;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 26px;
+    }
+
+    .hero .btns a {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 30px;
+      margin-right: 12px;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #0b1f33;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-img img {
+      width: 320px;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 30px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.5);
+      justify-self: end;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(11,31,51,.85);
+      backdrop-filter: blur(8px);
+      z-index: 50;
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      list-style: none;
+      padding: 14px 20px;
+    }
+
+    nav a { color: var(--text); font-size: 14px; }
+
+    nav a:hover { color: var(--primary); }
+
+    /* ===== SECTION ===== */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 20px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    /* ===== GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #102a43, #0b1f33);
+      padding: 28px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+      transition: .3s;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 { margin-bottom: 8px; }
+    .card span { color: var(--muted); font-size: 13px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #071726;
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero h1 { font-size: 40px; }
+      .hero-img img { width: 280px; height: 380px; }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-img img {
+        justify-self: center;
+        width: 260px;
+        height: 340px;
+      }
+
+      .hero .btns a {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 70px 16px 60px; }
+
+      .hero h1 { font-size: 32px; }
+
+      section h2 { font-size: 26px; }
+
+      .card {
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+      .hero-img img { justify-self: center; }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div>
+      <h1>Hi, Saya <span>Rahma Dina Ariyanti</span></h1>
+      <p>
+        Front End Web Developer yang berfokus pada pengembangan website modern,
+        responsif, dan berorientasi pada pengalaman pengguna (UI/UX).
+        Terbiasa membangun antarmuka yang rapi, fungsional, dan mudah digunakan.
+      </p>
+       <p style="margin-bottom:26px; color: var(--text); font-size:14px;">
+        📧 <a href="mailto:rahmadinaariyanti30@gmail.com">rahmadinaariyanti30@gmail.com</a> &nbsp;|&nbsp;
+        🔗 <a href="https://www.linkedin.com/in/rahma-dina-ariyanti-89943b307/" target="_blank">LinkedIn</a>
+      </p>
+      <div class="btns">
+        <a href="#projects" class="btn-primary">Project</a>
+        <a href="#about" class="btn-outline">About Me</a>
+        <a href="assets/CV-Rahma-Dina-Ariyanti.pdf" class="btn-outline" download>Download CV</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img src="assets/foto.jpg" alt="Foto Rahma" />
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p style="max-width:720px;color:var(--muted)">
+    Saya adalah Front End Web Developer yang berfokus pada pembuatan antarmuka web
+    yang modern, responsif, dan memiliki pengalaman pengguna yang baik.
+    Saya menikmati proses mengubah desain menjadi implementasi nyata
+    dengan kode yang bersih, terstruktur, dan mudah dikembangkan.
+
+    <br><br>
+    Saya terbiasa menggunakan HTML, CSS, dan JavaScript dalam pengembangan web,
+    serta bekerja dengan version control menggunakan Git.
+    Pengalaman saya sebagai Technical Writer membentuk cara kerja yang detail,
+    komunikatif, dan berorientasi pada solusi, sehingga saya mampu berkolaborasi
+    secara efektif dalam tim pengembangan.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, Responsive Web</p></div>
+    <div class="card"><h3>Tools</h3><p>Git, GitHub, MySQL, Figma, VS Code</p></div>
+    <div class="card"><h3>Soft Skills</h3><p>Teamwork, Communication, Time Management</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Technical Writer Intern</h3>
+      <span>PT Neuronworks Indonesia | 2022</span>
+      <p>Menyusun dokumentasi teknis dan panduan sistem internal perusahaan.</p>
+    </div>
+    <div class="card">
+      <h3>Organization</h3>
+      <span>OSIS | 2022</span>
+      <p>Sekretaris OSIS.</p>
+      <span>HIMARPL | 2024</span>
+       <p>Staff Administrasi HIMARPL Kabinet Ascendia.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Recent Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="assets/cvrahmacell.jpg" alt="RahmaCell" />
+      <h3>E-Commerce CV RahmaCell</h3>
+      <span>2025</span>
+      <p>Website e-commerce penjualan handphone dan aksesoris dengan UI responsif.</p>
+    </div>
+    <div class="card">
+      <img src="assets/odms.png" alt="ODMS" />
+      <h3>ODMS</h3>
+      <span>2025</span>
+      <p>Website layanan booking DJ yang memudahkan pengguna untuk mencari dan memesan DJ sesuai kebutuhan acara. Melalui ODMS, pengguna dapat melakukan booking DJ untuk berbagai event seperti wedding, karaoke, party, dan acara lainnya.</p>
+    </div>
+    <div class="card">
+      <img src="assets/ilmupadi.png" alt="IlmuPadi App" />
+      <h3>IlmuPadi App</h3>
+      <span>2024</span>
+      <p>Desain UI/UX aplikasi jual beli bahan pokok menggunakan Figma.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Rahma Dina Ariyanti · Portfolio<br>
+  <a href="assets/CV-Rahma-Dina-Ariyanti.pdf" download>Download CV</a>
+</footer>
+
+</body>
+</html>
